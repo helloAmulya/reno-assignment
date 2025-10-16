@@ -86,7 +86,7 @@ export default function AddSchoolPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
+
       <header className="bg-white shadow-md">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold text-gray-900">School Portal</h1>
@@ -169,7 +169,7 @@ export default function AddSchoolPage() {
         </div>
       </main>
 
-      {/* Footer */}
+
       <footer className="bg-gray-800 text-white py-8 mt-auto">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p>&copy; 2025 School Portal. All rights reserved.</p>
