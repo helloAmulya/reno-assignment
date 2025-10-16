@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ newSchool }, { status: 201 });
     } catch (e: unknown) {
         if (e instanceof z.ZodError) {
-            return NextResponse.json({ error: e.errors }, { status: 400 });
+            return NextResponse.json({ error: e }, { status: 400 });
         }
         
         console.error(e);
