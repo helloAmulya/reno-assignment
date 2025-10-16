@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# School Portal
+
+A simple web application to manage school information. This project allows users to add new schools and view a list of existing ones.
+
+## Features
+
+- **Add School:** Add a new school with details like name, address, city, state, contact, email, and an image.
+- **View Schools:** View a list of all the schools with their information.
+- **Modifications:** used an Orm (prisma) for mysql to be more easy and understandable, and used .tsx files for type safety
+
+## Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Database ORM:** [Prisma](https://www.prisma.io/)
+- **Database:** [MySQL](https://www.mysql.com/)
+- **Form Management:** [React Hook Form](https://react-hook-form.com/)
+- **Schema Validation:** [Zod](https://zod.dev/)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (v20 or later)
+- npm
+- MySQL
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1.  **Clone the repository:**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```bash
+    git clone <repository-url>
+    cd school-project
+    ```
 
-## Learn More
+2.  **Install dependencies:**
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    npm install
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3.  **Set up environment variables:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    Create a `.env` file in the root of the project and add your MySQL database connection string:
 
-## Deploy on Vercel
+    ```
+    DATABASE_URL="mysql://USER:PASSWORD@HOST:PORT/DATABASE"
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4.  **Run database migrations:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```bash
+    npx prisma migrate dev
+    ```
+
+5.  **Run the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### Available Scripts
+
+- `npm run dev`: Starts the development server.
+- `npm run build`: Creates a production build.
+- `npm run start`: Starts the production server.
+- `npm run lint`: Lints the codebase.
