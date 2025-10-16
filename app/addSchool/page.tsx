@@ -54,7 +54,7 @@ export default function AddSchoolPage() {
 
       const imageUrl = imageResult.imagePath;
 
-      const { image, ...rest } = data;
+      const {  ...rest } = data;
       const schoolData = { ...rest, image: imageUrl };
 
       const schoolResponse = await fetch("/api/schools", {
